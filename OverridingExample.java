@@ -1,25 +1,23 @@
 package xyz;
-class Animal{
-	void sound() {
-	System.out.println("Animls make sound");
-	}
-}
-class dog extends Animal{
-	void sound() {
-	System.out.println("Animls make sound");
-	}
-}
-
-
-
-
-
 
 public class OverridingExample {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.property();
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+        Parent p = new Parent();
+        p.property();
+    }
+}
 
-	}
+class Parent {
+    void property() {
+        System.out.println("My property is for my child");
+    }
+}
 
+class Child extends Parent {
+    void property() {
+        System.out.println("My parent property is my property");
+    }
 }
